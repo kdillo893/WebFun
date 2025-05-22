@@ -13,14 +13,10 @@
   <!-- HTML5 header is a segment denotation (semantic tag)-->
   <header>
     <h1>Random Demos</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li>Colorful Backgrounds</li>
-        <li>Webcam and Mic Demo</li>
-        <li><a href="/projs/cssProps">Demo of EVERY css property</a></li>
-      </ul>
-    </nav>
+    <!-- testing apache serverside includes -->
+    <!--#include virtual="includes/header.html" -->
+    <!--#echo var="DATE_LOCAL" -->
+
   </header>
 
   <div>
@@ -32,9 +28,7 @@
     </section>
   </div>
 
-  <footer>
-    <h1>This is the footer</h1>
-  </footer>
+    <!--#include virtual="includes/footer.html" -->
 </body>
 
 </html>
