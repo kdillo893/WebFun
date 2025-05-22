@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title">Bug Butts</h1>
+      <p id="description">Enter your description of a bug's butt</p>
+
+    </header>
+    <form id="survey-form">
+      <p>Name:</p>
+      <input type="text" id="name" placeholder="Enter your name" />
+      <p>Email:</p>
+      <input type="email" id="email" placeholder="Enter your Email" />
+      <p>How big is the bug in millimeters?</p>
+      <input type="number" id="number" min="10" max="99" />mm
+
+      <p>What type of bug is this?</p>
+      <select id="dropdown">
+        <option disabled="" selected="" value="">Select the Bug Type</option>
+      </select>
+
+      <p>What is the most prominent color of the bug?</p>
+      <input name="color" value="orange" type="radio" />
+      <input name="color" value="black" type="radio" />
+      <input name="color" value="blue" type="radio" />
+      <input name="color" value="rainbow" type="radio" />
+      <input name="color" value="green" type="radio" />
+
+      <p>What are some of the bug's other features?
+        <span>(Check all that apply)</span>
+      </p>
+      <label>
+        <input name="feature" value="wings" type="checkbox" />
+        Has Wings
+      </label>
+      <label>
+        <input name="feature" value="loud-noises" type="checkbox" />
+        Makes Loud Noises
+      </label>
+
+      <p>Describe why you like this bug and it's butt:</p>
+      <textarea id="comments" class="input-textarea" name="comments"
+        placeholder="Tell me why this bug is the bestest!"></textarea>
+
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </form>
+  </div>
+
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 # Web fun running things
 
 ## Install
+
 Make sure you have apache. If not, you can load the folder into vscode
 and let it run locally rather than do fancy stuff.
 
@@ -43,13 +44,11 @@ open network ports on the given device. This can be either with a web user:group
 combo or as root, which should pass the ownership to a web user:group with a proper config.
 
 With the apachectl route,
-
 ```
 apachectl -k start/stop/restart
 ```
 
 With the httpd route,
-
 ```
 httpd [-f confFile] -k start/stop/restart
 ```

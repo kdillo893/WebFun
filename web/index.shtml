@@ -14,19 +14,14 @@
   <!-- HTML5 header is a segment denotation (semantic tag)-->
   <header>
     <h1>Random Demos</h1>
-    <!-- apache serverside includes -->
-    <span id="home-date"></span>
-    <!--echo var="DATE_LOCAL" -->
+
   </header>
-  <!-- apache serverside includes -->
-  <!--#include virtual="includes/header.html" -->
 
   <div>
     <section>
       <!-- HTML5 nav is a segment denotation (semantic tag)-->
       <div>
         <h1>this is a silly thing</h1>
-        <button onclick="showHomeDate()">Show Home Date</button>
       </div>
     </section>
   </div>
