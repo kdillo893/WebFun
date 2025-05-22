@@ -6,39 +6,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Every CSS Property (WIP)</title>
-  <link rel="stylesheet" href="/allProps.css" />
-  <link rel="script"
-</head>
+  <link rel="stylesheet" href="../../css/home.css" />
+  <link rel="stylesheet" href="./allProps.css" />
+  <link rel="script" </head>
 
 <body>
   <!-- HTML5 header is a segment denotation (semantic tag)-->
   <header>
     <h1>Demo of EVERY css property</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li>Colorful Backgrounds</li>
-        <li>Webcam and Mic Demo</li>
-        <li><a href="/projs/cssProps" disabled selected>CSS Properties Page</a></li>
-      </ul>
-    </nav>
+
   </header>
+  <div style="flex-direction: column; display: flex;">
+    <div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/projs/cssProps" disabled selected>CSS Properties</a></li>
+          <li>Colorful Backgrounds</li>
+          <li>Webcam and Mic Demo</li>
+        </ul>
+      </nav>
+    </div>
 
-  <div>
-    <section>
-      <div id="borders">
-        <p>This is some text surrounded by Borders</p>
-      </div>
-      <!-- HTML5 nav is a segment denotation (semantic tag)-->
-      <div>
-        <h1>this is a silly thing</h1>
-      </div>
-    </section>
+    <div>
+      <section>
+        <div id="colors">
+          <div>rgb(32, 82, 11), bg:rgb(138, 0, 232)</div>
+          <div>#ffaaee, bg:#034912</div>
+          <div>Tomato, bg:SlateBlue</div>
+        </div>
+        <div id="borders">
+          <div>
+            <p>Blue double border with funny sizes</p>
+          </div>
+          <div>
+            <p>This is some text surrounded by Borders</p>
+          </div>
+          <div>
+            <p>This is some text surrounded by Borders</p>
+          </div>
+        </div>
+        <div id="background">
+          <div class="outer">
+            bg1
+            <div class="inner">
+              bg2
+              <div class="deep">
+                bg2
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
-
-  <footer>
-    <h1>This is the footer</h1>
-  </footer>
 </body>
 
 </html>

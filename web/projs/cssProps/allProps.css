@@ -1,0 +1,88 @@
+/* make the text here bigger*/
+section p,
+section div {
+  font-size: 2vh;
+}
+
+div#background .outer {
+  padding: 10px;
+  width: 100%;
+  background: rgba(0, 128, 0, 0.3);
+}
+div#background .inner {
+  padding: 10px;
+  width: 100%;
+
+  background: rgba(0, 0, 232, 0.2);
+}
+div#background .deep {
+  padding: 10px;
+  width: 100%;
+
+  background-image: url("randomColor2.png");
+  background-color: #0022ee;
+  transition: background-color 3s;
+}
+div#background .deep:hover {
+  background-color: #ffee33 ;
+}
+
+div#borders div:nth-child(1) {
+  padding: 10px;
+  border: 1px solid black;
+  border-color: blue;
+  border-width: 12px 1px 1px 6px;
+  border-style: double;
+}
+
+div#borders div:nth-child(1) {
+  padding: 10px;
+  border: 1px solid black;
+  border-color: blue;
+  border-width: 12px 1px 1px 6px;
+  border-style: double;
+}
+
+
+/* selecting by child count */
+div#colors div {
+  padding: 1vh;
+  font-size: 2vb;
+}
+
+div#colors div:nth-child(1) {
+  color: rgb(232, 222, 211);
+  background-color: rgb(38, 0, 132);
+}
+
+div#colors div:nth-child(2) {
+  color: #ffaaee;
+  background-color: #034912;
+}
+
+div#colors div:nth-child(3) {
+  color: Tomato;
+  background-color: slateblue;
+}
+
+nav li {
+  padding: 1vh;
+  display: inline-block;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: none;
+  width: 100%;
+  height: auto;
+  /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  width: auto;
+  display: inline;
+}

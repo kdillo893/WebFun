@@ -14,10 +14,9 @@
   <header>
     <h1>Random Demos</h1>
     <!-- testing apache serverside includes -->
-    <!--#include virtual="includes/header.html" -->
     <!--#echo var="DATE_LOCAL" -->
-
   </header>
+  <!--#include virtual="includes/header.html" -->
 
   <div>
     <section>
