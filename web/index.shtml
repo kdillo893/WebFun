@@ -13,9 +13,10 @@
   <!-- HTML5 header is a segment denotation (semantic tag)-->
   <header>
     <h1>Random Demos</h1>
-    <!-- testing apache serverside includes -->
+    <!-- apache serverside includes -->
     <!--#echo var="DATE_LOCAL" -->
   </header>
+  <!-- apache serverside includes -->
   <!--#include virtual="includes/header.html" -->
 
   <div>
@@ -27,7 +28,7 @@
     </section>
   </div>
 
-    <!--#include virtual="includes/footer.html" -->
+  <!--#include virtual="includes/footer.html" -->
 </body>
 
 </html>
