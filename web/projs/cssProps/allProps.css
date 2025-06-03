@@ -28,8 +28,7 @@ div#background .deep:hover {
 }
 
 div#borders div:nth-child(1) {
-  padding: 10px;
-  border: 1px solid black;
+  padding: 5px;
   border-color: blue;
   border-width: 12px 1px 1px 6px;
   border-style: double;
