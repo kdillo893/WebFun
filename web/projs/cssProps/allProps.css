@@ -28,21 +28,23 @@ div#background .deep:hover {
 }
 
 div#borders div:nth-child(1) {
-  padding: 10px;
-  border: 1px solid black;
+  padding: 5px;
   border-color: blue;
   border-width: 12px 1px 1px 6px;
   border-style: double;
 }
 
-div#borders div:nth-child(1) {
+div#borders div:nth-child(2) {
   padding: 10px;
-  border: 1px solid black;
-  border-color: blue;
-  border-width: 12px 1px 1px 6px;
-  border-style: double;
+  border-color: orchid;
+  border-width: 5px 5px 5px 5px;
+  border-style: dotted;
 }
 
+div#borders div:nth-child(3) {
+  padding: 10px;
+  border: 2px solid red;
+}
 
 /* selecting by child count */
 div#colors div {
@@ -52,7 +54,7 @@ div#colors div {
 
 div#colors div:nth-child(1) {
   color: rgb(232, 222, 211);
-  background-color: rgb(38, 0, 132);
+  background-color: rgb(138, 0, 232);
 }
 
 div#colors div:nth-child(2) {
