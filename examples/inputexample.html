@@ -1,0 +1,62 @@
+<!-- <h1 id="display-text"></h1> --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- This is originally distributed by Naperville Youth Club 
+    Instructors for the purposes of teaching forms in the Web Development
+    curriculum. This is not my original work, but modified to suit
+    the evolving landscape of front-end development
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>My Form</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--modern version of the above; no need for text/html declaration-->
+  <meta charset="utf-8" />
+  <link href="css/mystyle1.css" rel="stylesheet" type="text/css" />
+  <link href="css/defaults.css" rel="stylesheet" type="text/css" />
+  <script defer>
+    function formAlert(formData) {
+      console.log(formData);
+      alert(...formData);
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <a id="header-title" href="/">
+      <h1>Website Demos</h1>
+    </a>
+    <!-- apache serverside includes -->
+    <!--echo var="DATE_LOCAL" -->
+    <nav>
+      <ul>
+        <li><a href="media.html">Media Examples</a></li>
+        <li><a href="mypage.html">Simple Page</a></li>
+        <li><a href="myform.html">Form Example</a></li>
+        <li><a href="inputexample.html">Input Example</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="header">
+    <h1></h1>
+  </div> <!-- end of header div -->
+  <div id="bodycontent">
+    <form method="get" action="javascript:alert('hi'); return false;">
+      <p>
+        <label for="yourname">Enter your name:</label>
+        <input type="text" name="yourname" id="name-input" />
+      </p>
+      <p><input type="submit" /></p>
+    </form>
+    <!-- <h1 id="display-text"></h1> -->
+  </div> <!-- end of bodycontent div -->
+
+  <div id="id-name"></div>
+  <div class="class-name"></div>
+  <input type="text"/>
+
+
+</body>
+
+</html>

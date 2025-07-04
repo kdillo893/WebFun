@@ -1,0 +1,31 @@
+#my-id {
+  color: #f1f1f1;
+}
+
+.my-class {
+  background-color: #383838;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other
+* instead of next to each other, on small screens */
+/* @media (max-width: 600px) {
+  nav,
+  article {
+    width: 100%;
+    height: auto;
+  }
+} */

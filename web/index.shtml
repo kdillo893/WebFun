@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>List of Demos</title>
   <link rel="stylesheet" href="css/home.css" />
+  <script src="js/home.js"></script>
 </head>
 
 <body>
@@ -14,7 +15,8 @@
   <header>
     <h1>Random Demos</h1>
     <!-- apache serverside includes -->
-    <!--#echo var="DATE_LOCAL" -->
+    <span id="home-date"></span>
+    <!--echo var="DATE_LOCAL" -->
   </header>
   <!-- apache serverside includes -->
   <!--#include virtual="includes/header.html" -->
@@ -24,6 +26,7 @@
       <!-- HTML5 nav is a segment denotation (semantic tag)-->
       <div>
         <h1>this is a silly thing</h1>
+        <button onclick="showHomeDate()">Show Home Date</button>
       </div>
     </section>
   </div>
