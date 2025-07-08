@@ -10,8 +10,9 @@
   <script defer>
     function formAlert(formData) {
       console.log(formData);
-      alert(...formData);
+      alert(formData);
     }
+
   </script>
   <script src="js/form.js"></script>
   <script defer src="js/dynamicHeader.js"></script>
@@ -36,9 +37,11 @@
     <!--echo var="DATE_LOCAL" -->
     <nav>
       <ul>
-        <li><a href="media.html">Media Examples</a></li>
-        <li><a href="mypage.html">Simple Page</a></li>
-        <li><a href="myform.html">Form Example</a></li>
+        <li><a class="links" href="/media.html">Media Examples</a></li>
+        <li><a class="links" href="/mypage.html">Simple Page</a></li>
+        <li><a class="links" href="/myform.html">Form Example</a></li>
+        <li><a class="links" href="/w3c">W3C Examples</a></li>
+        <li><a class="links" href="/questions/">Questions</a></li>
       </ul>
     </nav>
   </header>
@@ -54,27 +57,57 @@
       </div>
       <div>
         <label>
-          <input type="radio" name="radio">good
+          <input type="radio" name="rad" value="good">good
         </label>
         <label>
-          <input type="radio" name="radio">bad
+          <input type="radio" name="rad" value="bad">bad
         </label>
         <label>
-          <input type="radio" name="radio">worse
+          <input type="radio" name="rad" value="worse">worse
         </label>
+      </div>
+      <div>
         <label>
           <input type="checkbox" name="chk">worse
         </label>
+      </div>
+      <div>
         <textarea name="description"></textarea>
-        <select>
+      </div>
+      <div>
+        <select name="input-method">
           <option>keyboard</option>
           <option>controller</option>
           <option>mouse</option>
         </select>
+      </div>
+      <div>
         <input type="color" name="color-input" />
+      </div>
+      <div>
         <input type="search" name="search-input" />
+      </div>
+      <div>
         <input type="date" name="date-input" />
-        <input type="range" name="range-input" />
+      </div>
+      <div>
+        <label>
+          <input type="range" name="volume" id="volume-input" min="0" max="11" step="1" value="5" />
+          <p>
+            <span>Volume: </span>
+            <output id="volume-display"></output>
+          </p>
+        </label>
+        <script>
+          const volDisplay = document.querySelector("#volume-display");
+          const volInput = document.querySelector("#volume-input");
+          volDisplay.textContent = volInput.value;
+          volInput.addEventListener("input", (event) => {
+            volDisplay.textContent = event.target.value;
+          });
+        </script>
+      </div>
+      <div>
         <input type="email" name="email-input" />
       </div>
       <!-- <div>
