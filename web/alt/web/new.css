@@ -1,0 +1,52 @@
+/* a {
+    text-decoration: none;
+    margin: 2px;
+    padding:10px;
+    border: 2px dotted #885533;
+    background-color: orchid;
+}
+
+h1 {
+    font-family: Arial;
+    background-color: aquamarine;
+}
+
+body {
+    background-image: url("/media/image.png");
+    background-size:200px;
+} */
+
+#hello {
+    /* width:  */
+    /* margin:  */
+    /* margin-top: */
+    background-color: #885533;
+    padding: 10px;
+}
+
+/* .box {
+    display:grid;
+}
+
+.box button {
+    grid-row: 1;
+    grid-column: 2;
+} */
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    height: 200px;
+}
+
+.box button {
+    background-color: orchid;
+    border: 8px gray double;
+}
+
+body {
+    background-image: url("/images/shopping.webp");
+    background-size: 2%;
+}

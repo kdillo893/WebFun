@@ -3,58 +3,62 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>List of Demos</title>
-    <link rel="stylesheet" href="css/defaults.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List of Demos</title>
+  <link rel="stylesheet" href="css/defaults.css" />
 </head>
 
 <body>
-    <!-- HTML5 header is a segment denotation (semantic tag)-->
-    <header>
-        <a id="header-title" href="/">
-            <h1>Website Demos</h1>
-        </a>
-        <!-- apache serverside includes -->
-        <!--echo var="DATE_LOCAL" -->
-        <nav>
-            <ul>
-                <li><a href="media.html">Media Examples</a></li>
-                <li><a href="mypage.html">Simple Page</a></li>
-                <li><a href="myform.html">Form Example</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- HTML5 header is a segment denotation (semantic tag)-->
+  <header>
+    <a id="header-title" href="/">
+      <h1>Website Demos</h1>
+    </a>
     <!-- apache serverside includes -->
-    <!--#include virtual="includes/header.html" -->
+    <!--echo var="DATE_LOCAL" -->
+    <nav>
+      <ul>
+        <li><a href="media.html">Media Examples</a></li>
+        <li><a href="mypage.html">Simple Page</a></li>
+        <li><a href="myform.html">Form Example</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- apache serverside includes -->
+  <!--#include virtual="includes/header.html" -->
 
-    <main>
-        <h2>HTML 5 special tags</h2>
-        <div>
-            <audio controls>
-                <source src="media/StarWars3.wav" type="audio/wav" />
-            </audio>
-        </div>
-        <div>
-            <audio>
+  <main>
+    <h2>HTML 5 special tags</h2>
+    <div>
+      <audio controls>
+        <source src="media/StarWars3.wav" type="audio/wav" />
+      </audio>
+    </div>
+    <div>
+      <audio>
 
-            </audio>
-        </div>
-        <div>
-            TODO:
-            <video>
+      </audio>
+    </div>
+    <div>
+      TODO:
+      <video>
 
-            </video>
-        </div>
+      </video>
+    </div>
 
-        <h2>iframes pull content from other websites</h2>
-        <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" width="400" height="300" frameborder="0">This Should Not
-            Show</iframe>
+    <h3>iframes pull content from other websites</h3>
+    <iframe
+        src="https://www.youtube.com/embed/jNQXAC9IVRw"
+        width="400" height="300" frameborder="0"
+    >
+        This Should Not Show
+    </iframe>
 
-    </main>
+  </main>
 
 
-    <!--#include virtual="includes/footer.html" -->
+  <!--#include virtual="includes/footer.html" -->
 </body>
 
 </html>

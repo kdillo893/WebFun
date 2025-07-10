@@ -1,0 +1,21 @@
+.grid-container {
+    display: grid;
+    height: 50vh;
+    grid-template-rows: 100px, 100px, 100px;
+    grid-template-columns: 100px, 100px, 100px;
+
+}
+.item {
+    /* grid-column: ; */
+    border: 1px solid goldenrod;
+    background-color: cornflowerblue;
+}
+
+.item + .size-3 {
+  grid-column: 300px;
+
+}
+
+.flex-container {
+    display: flex;
+}
