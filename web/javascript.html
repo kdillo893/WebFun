@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+        function randomBackground() {
+            let rRandom = Math.random() * 256;
+            let bRandom = Math.random() * 256;
+            let gRandom = Math.random() * 256;
+
+            const everythingEl = document.getElementById("everything");
+
+            everythingEl.style.backgroundColor = `rgb(${rRandom}, ${gRandom}, ${bRandom})`
+            console.log("oop");
+        }
+
+        function inputChooseBackground(element) {
+            const everythingEl = document.getElementById("everything");
+
+            console.log(element.value);
+            everythingEl.style.backgroundColor = element.value;
+        }
+
+        // const bodyEl = document.getElementsByTagName("body");
+        // const colorInput = document.querySelector("input[name='background-color']");
+        // colorInput.addEventListener("change",
+        //     inputChooseBackground(colorInput, bodyEl));
+    </script>
+
+    <script>
+        function doText() {
+            const buttonEl = document.getElementById("button1");
+            document.createElement("a");
+            const textEl = document.getElementById("text-here");
+
+            textEl.innerText = "THERE IT IS!";
+
+            
+
+        }
+
+    </script>
+
+    <script>
+
+        var sum = 1 + 2;
+
+        sum += 6;
+
+        console.log(sum);
+        // alert(sum);
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <button id="button1" onclick="doText()">
+        Click to add text
+    </button>
+    <div id="text-here"></div>
+
+    <div id="everything">
+        <button id="button_A" onclick="randomBackground()">
+            Press me for random color!
+        </button>
+
+        <input type="color" name="background-color" onchange="inputChooseBackground(this)" />
+        <h3 id="heading_A">This is some stuff!</h3>
+
+    </div>
+
+
+</body>
+
+</html>
