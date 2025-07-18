@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/variablesAndMath.js"></script>
+    <script>
+        function displayImage() {
+            const imageElement =
+                document.getElementById("image-to-change");
+
+            imageElement.src = "/images/shopping.webp";
+            imageElement.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <img style="display: none;"
+            id="image-to-change"
+            alt="Nothing here right now" />
+    <button onclick="displayImage()">Show Image</button>
+
+    <p>
+        Look at console! Press F12 or right-click and choose "Inspect" from the dropdown
+    </p>
+    <!-- <button id="button1" onclick="doText()">button</button> -->
+    <button>button</button>
+    <button>button</button>
+    <button>button</button>
+
+
+    <p id="text-here">
+        Blank text
+    </p>
+
+</body>
+
+</html>
