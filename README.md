@@ -1,7 +1,6 @@
 # Web fun running things
 
 ## Install
-
 Make sure you have apache. If not, you can load the folder into vscode
 and let it run locally rather than do fancy stuff.
 
@@ -49,8 +48,7 @@ httpd [-f confFile] -k start/stop/restart
 to execute
 
 ### VSCode
-
-Just open the folder LUL
+Just open the folder and preview LUL
 
 VSCode has internal tools to host a web server and link together the project
 heirarchy so you don't have to do it explicitly.

@@ -1,0 +1,6 @@
+# I don't own the examples for any of these
+*/
+*/**
+
+# whitelist gitignore
+!.gitignore
