@@ -1,7 +1,6 @@
 # Web fun running things
 
 ## Install
-
 Make sure you have apache. If not, you can load the folder into vscode
 and let it run locally rather than do fancy stuff.
 
