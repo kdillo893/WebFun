@@ -11,16 +11,24 @@ of accomplishing this:
 2. ``httpd``, which is a direct execution of the server and can use a specified ``httpd.conf`` with ``-f``
 
 Within the ``httpd.conf`` file being modified, specify
-* DocumentRoot "/path/to/web/root"
-    * Along with this, first exclude access to all other directories with 
+* Doc root:
+
+    ```conf
+    DocumentRoot "/path/to/web/root"
     ```
-    <Directory />
+
+    * Along with this, first exclude access to all other directories with
+
+    ```conf
+    <Directory>
         AllowOverride none
         Require all denied
     </Directory>
     ```
+
     Followed by allowing and granting access to desired directories. eg.)
-    ```
+
+     ```conf
     <Directory "/path/to/web/root">
         Options Indexes FollowSymLinks
         AllowOverride none
@@ -35,11 +43,13 @@ open network ports on the given device. This can be either with a web user:group
 combo or as root, which should pass the ownership to a web user:group with a proper config.
 
 With the apachectl route,
+
 ```
 apachectl -k start/stop/restart
 ```
 
 With the httpd route,
+
 ```
 httpd [-f confFile] -k start/stop/restart
 ```
