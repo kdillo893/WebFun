@@ -11,9 +11,11 @@
    * 4. Ensure mysqli extension is enabled in php.ini for the apache server.
    */
   
+  //make this load from a properties file instead
+
   $db_url = 'localhost';
   $db_user = 'mydbuser';
-  $db_password = 'SMlfOsNAF@@HxH0a';
+  $db_password = 'THIS IS A FAKE PASSWORD';
   $db_dbname = 'mydatabase';
   
   // connect to database
