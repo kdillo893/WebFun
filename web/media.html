@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- This is the homepage for navigating to different modules -->
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List of Demos</title>
+    <link rel="stylesheet" href="css/defaults.css" />
+</head>
+
+<body>
+    <!-- HTML5 header is a segment denotation (semantic tag)-->
+    <header>
+        <a id="header-title" href="/">
+            <h1>Website Demos</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a class="links" href="/media.html">Media Examples</a></li>
+                <li><a class="links" href="/mypage.html">Simple Page</a></li>
+                <li><a class="links" href="/myform.html">Form Example</a></li>
+                <li><a class="links" href="/w3c">W3C Examples</a></li>
+        <li><a class="links" href="/questions/">Questions</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- apache serverside includes -->
+    <!--#include virtual="includes/header.html" -->
+
+    <main>
+        <h2>HTML 5 special tags</h2>
+        <h3>Star wars sound</h3>
+        <div>
+            <audio controls>
+                <source src="media/StarWars3.wav" type="audio/wav" />
+            </audio>
+        </div>
+        <h3>Eample butterfly video</h3>
+        <div>
+            <video controls width="300">
+                <source src="media/istock_butterfly.mp4" , type="video/mp4" />
+            </video>
+            <p>
+                Your browser doesn't support HTML video. Here is a
+                <a href="myVideo.mp4" download="myVideo.mp4">link to the video</a> instead.
+            </p>
+        </div>
+
+        <h3>iframes pull content from other websites</h3>
+        <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" 
+        width="400" height="300" frameborder="0">This Should Not
+            Show</iframe>
+
+    </main>
+
+    <!--#include virtual="includes/footer.html" -->
+</body>
+
+</html>

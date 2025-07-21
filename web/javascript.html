@@ -38,9 +38,6 @@
             const textEl = document.getElementById("text-here");
 
             textEl.innerText = "THERE IT IS!";
-
-            
-
         }
 
     </script>
@@ -57,6 +54,12 @@
 
     </script>
 
+    <style>
+        #everything {
+            height: 400px;
+            transition: background-color 0.5s;
+        }
+    </style>
 
 </head>
 
@@ -71,7 +74,9 @@
             Press me for random color!
         </button>
 
-        <input type="color" name="background-color" onchange="inputChooseBackground(this)" />
+        <input type="color"
+            name="background-color"
+            onchange="inputChooseBackground(this)" />
         <h3 id="heading_A">This is some stuff!</h3>
 
     </div>

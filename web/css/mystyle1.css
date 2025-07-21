@@ -1,0 +1,97 @@
+﻿/*
+CSS for Websites and Web Pages
+*/
+
+body {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  background-color: white;
+  line-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: small;
+  font-style: normal;
+  color: black;
+}
+
+p {
+  font-size: small;
+  font-style: normal;
+  color: black;
+}
+
+h1 {
+  font-size: x-large;
+  font-style: normal;
+  color: black;
+}
+
+h2 {
+  font-size: 130%;
+  font-style: normal;
+  color: black;
+}
+
+a {
+  font-weight: bold;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: navy;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: navy;
+}
+
+a:active {
+  color: aqua;
+  background-color: navy;
+}
+
+#navigation {
+  width: 180px;
+  height: 484px;
+  background: grey url(backgrounds/nav-bg.jpg) no-repeat;
+}
+
+#header {
+  border-top: 3px solid #7da5d8;
+}
+
+/*
+This section deals with the position of items on the screen.  
+It uses absolute positioning - fixed x and y coordinates measured 
+from the top-left corner of the browser's content display.
+*/
+
+/* #navigation,
+#bodycontent,
+#header {
+  position: absolute;
+} */
+
+#navigation,
+#bodycontent {
+  top: 6.54em;
+}
+
+#bodycontent {
+  left: 200px;
+}
+
+#header {
+  width: 100%;
+}
+
+form div {
+  padding:0.5em;
+}
