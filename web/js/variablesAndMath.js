@@ -130,7 +130,7 @@ function doText() {
     // const textEl = document.getElementById("text-here");
     const newText = document.createTextNode("Link Here!");
     newElement.appendChild(newText)
-    newElement.href = "/javascriptIo.html";
+    newElement.href = "/web/javascriptIo.html";
     const textHereElement = document.getElementById("text-here");
 
     textHereElement.appendChild(newElement);
