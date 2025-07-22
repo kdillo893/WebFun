@@ -5,9 +5,12 @@ p {
 }
 
 div {
+    margin:2px ;
+    display:block;
     border: 1px solid black;
     border-top: none;
     background-color: darkcyan;
+   
 }
 
 /* class selectors */
@@ -17,11 +20,33 @@ div {
 
 .container {
     display: flex;
+    justify-content:space-between;
 }
+
+.container div {
+    background-color: antiquewhite;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    border: 2px orange solid;
+}
+
+.container div:hover {
+    background-color: #f83489;
+    border-color: aliceblue;
+}
+
+.container div:active {
+    background-color: rgb(229, 198, 157);
+    border-color:orangered;
+}
+
 
 .grid-container {
     display: grid;
-    grid-template-columns: 30vw, 30vw, 30vw;
+    grid-template-columns: 50px, 50px, 50px;
+    grid-template-rows: 50px;
 }
 
 /* id selectors */

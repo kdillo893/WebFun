@@ -18,6 +18,7 @@ counter--;
 
 console.log(counter);
 
+console.log("This prints numbers 0 through 9")
 for (let i = 0; i < 10; ++i) {
-
+    console.log(i);
 }

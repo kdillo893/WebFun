@@ -5,6 +5,8 @@
 var myVariable;
 myVariable = 21;
 
+console.log("myVariable=" +myVariable);
+
 var x = 12;
 var y = 32;
 
@@ -14,6 +16,7 @@ var this_also123123123works;
 /* NOT VALID VARIABLEs!
 var 321laj;
 var name with spaces;
+var name*variable;
 */
 
 const unchanging = "this won't change";
@@ -46,10 +49,11 @@ let undefVar;
 let definedVal = "something";
 definedVal = undefined;
 
-//bigint
+//bigint - not covered
 let largeNum = BigInt(Number.MAX_SAFE_INTEGER + 1000);
+console.log("giant number = " +largeNum)
 
-//symbol
+//symbol - not covered
 let id = Symbol("special-symbol");
 
 //Object
@@ -136,7 +140,8 @@ function doText() {
     textHereElement.appendChild(newElement);
 }
 
-
+typeof(num);
+typeof(words);
 
 
 // alert(sum);
