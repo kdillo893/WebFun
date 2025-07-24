@@ -18,7 +18,7 @@ header {
 
 header h1 {
   margin: 0;
-  padding: 2vh;
+  padding: 0.2em;
 }
 
 header a {
@@ -45,6 +45,8 @@ header nav ul li {
   border: 2px solid #383838;
   padding: 6px;
   margin: 6px;
+  transition: background-color 0.5s ease-in-out;
+  /* transition: background-color 1.5s ease-out; */
 }
 
 /* Style the footer */
@@ -56,6 +58,49 @@ footer {
 }
 
 table td {
-  padding:2px;
-  border:1px dotted;
+  padding: 2px;
+  border: 1px dotted;
+}
+
+
+label {
+  display: block;
+  margin: 10px;
+}
+
+@media (width < 900px) {
+  header {
+    font-size: 1.5em;
+  }
+  header a {
+    padding:0px;
+    margin: 0px;
+    height: min-content;
+  }
+  header h1 {
+    padding:0px;
+    margin-bottom: 0px;
+    height: auto;
+  }
+
+  header nav ul li {
+    border: 2px solid #383838;
+    padding: 2px;
+    margin: 2px;
+  }
+
+  header nav ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: auto;
+  }
+
+  header nav {
+    padding: 0px;
+    margin: 2px 0px 2px 0px;
+  }
+}
+
+header ul li:hover {
+  background-color: pink;
 }
