@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript keyboard listener</title>
-    <script src="js/keyboardListener.js"></script>
+    <script defer src="js/keyboardListener.js"></script>
     <style>
         div {
             margin: 12px;
@@ -46,7 +46,6 @@
         This page will listen to the keys you press and put them in the console.
         To view the console, press <code>F12</code> or right-click and choose "Inspect"
     </p>
-<!-- 
     <div
         style="background-color: blanchedalmond; 
             height: 100px; width: 200px; display: flex;
@@ -55,10 +54,13 @@
 
     </div> -->
 
-    <div id="click-box" style="background-color: aqua;
-            height: 300px; width: 300px;">
+    <div id="click-box" 
+            style="background-color: aqua;
+                height: 300px; width: 300px;
+                display: flex; justify-content: center;
+                align-items: center;">
         <h1>This box will listen to Clicks!</h1>
-    </div> -->
+    </div>
 </body>
 
 </html>

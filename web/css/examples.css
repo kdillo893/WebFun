@@ -1,16 +1,19 @@
 /* type selectors */
+main {
+    min-height: 600px;
+}
+
 p {
     font-family: Courier;
     color: #f83489;
 }
 
 div {
-    margin:2px ;
-    display:block;
+    margin: 2px;
+    display: block;
     border: 1px solid black;
     border-top: none;
     background-color: darkcyan;
-   
 }
 
 /* class selectors */
@@ -20,8 +23,8 @@ div {
 
 .container {
     display: flex;
-    justify-content:space-between;
-    height:50px;
+    justify-content: space-between;
+    height: 50px;
 
 }
 
@@ -42,7 +45,7 @@ div {
 
 .container div:active {
     background-color: rgb(229, 198, 157);
-    border-color:orangered;
+    border-color: orangered;
 }
 
 
@@ -55,8 +58,27 @@ div {
 /* id selectors */
 #my-button {
     background-color: aqua;
-    padding: 3px 1px 3px 1px;
+    padding: 6px 2px 6px 2px;
     border: 1px solid gray;
     border-radius: 2px;
     box-shadow: 3px 3px slategray;
+
+    /* example1 
+    position: fixed;
+    bottom: 20px;
+    */
+
+    /* example2 */
+    position: sticky;
+    bottom: 20px;
+}
+
+#my-button:hover {
+    background-color: rgb(33, 220, 220);
+    box-shadow: 2px 2px slategray;
+}
+
+#my-button:active {
+    background-color: rgb(1, 172, 172);
+    box-shadow: 2px 2px 1px 1px slategray inset;
 }

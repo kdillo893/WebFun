@@ -20,7 +20,6 @@ function keyLogger(event, fileout) {
 
         }
     }
-    
 }
 
 function changeText(event) {
@@ -114,27 +113,33 @@ function clearCalculator() {
 }
 
 
+// clicking event listeners
+const clickBox = document.getElementById("click-box");
 
-
-
-
-
-
-function showClickEvent(event) {
-    
+const headingsInBox = clickBox.getElementsByTagName("h1");
+let h1Inside = null;
+if (headingsInBox != null && headingsInBox.length > 0) {
+    h1Inside = headingsInBox[0];
 }
 
+function showClickEvent(event) {
+    console.log(event);
 
-        //Don't type this yet;
-        // const outputElement = document.getElementById("key-output");
-        // const outLine = document.createElement("p");
-        // const 
-        // outputElement.appendChild()
-    
+    //MORE TO GO
+    h1Inside.innerText = event.offsetX + "," + event.offsetY;
+}
+
+clickBox.addEventListener("click", showClickEvent);
 
 
+//Don't type this yet;
+// const outputElement = document.getElementById("key-output");
+// const outLine = document.createElement("p");
+// const 
+// outputElement.appendChild()
 
 
+// TODO fix
 //check key presses with keyboard input.
 // document.addEventListener("keydown", (event) => {
 //     const key = event.key;
