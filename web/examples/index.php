@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<<<<<<< HEAD:index.html
-    <a href="web/">Go to Web Folder</a>
-</body>
-</html>
-=======
+    
 
     <h1>This is regular HTML</h1>
     <?php
@@ -115,4 +112,4 @@
     </form>
 </body>
 </html>
->>>>>>> dd3fd20 (php stuff, css, more examples):Web Development Class/web/intro.php
+

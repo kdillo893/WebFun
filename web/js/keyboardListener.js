@@ -45,8 +45,6 @@ function changeText(event) {
 
 document.addEventListener("keydown", changeText);
 
-
-
 function clearOutput() {
     const outputElement = document.getElementById("output-element");
     outputElement.innerHTML = null;

@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-var romanToInt = function(s) {
+var romanToInt = function (s) {
 
   let sTotal = 0;
   //null/empty/undefined
@@ -68,7 +68,7 @@ var romanToInt = function(s) {
  * @param {string} s
  * @return {number}
  */
-var romanToIntV2 = function(s) {
+var romanToIntV2 = function (s) {
 
   let sTotal = 0;
   //null/empty/undefined
