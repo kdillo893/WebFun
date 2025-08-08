@@ -11,38 +11,27 @@
    * 4. Ensure mysqli extension is enabled in php.ini for the apache server.
    */
   
-  //make this load from a properties file instead
-
   $db_url = 'localhost';
-  $db_user = 'mydbuser';
-  $db_password = 'THIS IS A FAKE PASSWORD';
   $db_dbname = 'mydatabase';
+  $db_user = 'mydbuser';
+  $db_password = 'FAKE_PASSWORD_213$$';
   
-  // connect to database
   $connect = mysqli_connect($db_url, $db_user, $db_password, $db_dbname);
   
-  // check connection
   if(!$connect){
     echo 'Connection error: ' . mysqli_connect_error();
   }
   
-  // write query for all data
-  $tablename = 'students';
-  $sql = 'SELECT studentid, firstname, lastname, age, startdate FROM ' . $tablename;
+  $tablename = 'campers';
+  $sql = 'SELECT camperid, firstname, grade_level, weeks FROM ' . $tablename;
   
-  // Note: You can change the SQL query being used as the value in the line of code above to do something else, 
-  // but you might have to change some other lines of code as well depending on what you decide to use.
   
-  // make query & get result
   $result = mysqli_query($connect, $sql);
   
-  // fetch the resulting rows as an array
   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
   
-  // free result from memory
   mysqli_free_result($result);
   
-  // close connection
   mysqli_close($connect);
   
 ?>
@@ -62,11 +51,16 @@
   
     <?php foreach($data as $edata){ ?>
     <li data-rowId="<?php $edata?>">
-    <?php $Value1 = htmlspecialchars($edata['studentid']); 
-     $Value2 = htmlspecialchars($edata['firstname']); 
-     $Value3 = htmlspecialchars($edata['lastname']); 
-     $Value4 = htmlspecialchars($edata['age']); 
-     echo "[studentid]=> " . $Value1 . " [firstname]=> " . $Value2 . " [lastname]=> " . $Value3 . " [age]=> " . $Value4 . ""; ?></h3>
+    <?php 
+      $camperId = htmlspecialchars($edata['camperid']); 
+      $camperName = htmlspecialchars($edata['firstname']); 
+      $class = htmlspecialchars($edata['class']); 
+      $grade = htmlspecialchars($edata['grade']);
+      $weeks = htmlspecialchars($edata['weeks']);
+      echo "[camperId]=> " . $camperId . " [firstname]=> " 
+        . $camperName . " [class]=> " . $class . " [grade]=> "
+        . $grade . " [weeks]=>". $weeks ."";
+    ?>
     </li>
   <?php } ?>
   

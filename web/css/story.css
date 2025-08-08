@@ -18,7 +18,7 @@ header {
 
 header h1 {
   margin: 0;
-  padding: 2vh;
+  padding: 0.2em;
 }
 
 header a {
@@ -39,6 +39,7 @@ header nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   /* padding inline is default 40px, need override */
   padding-inline-start: 0px;
@@ -65,4 +66,43 @@ footer {
 table td {
   padding: 2px;
   border: 1px dotted;
+}
+
+
+label {
+  display: block;
+  margin: 10px;
+}
+
+@media (width < 900px) {
+  header {
+    font-size: 1.5em;
+  }
+  header a {
+    padding:0px;
+    margin: 0px;
+    height: min-content;
+  }
+  header h1 {
+    padding:0px;
+    margin-bottom: 0px;
+    height: auto;
+  }
+
+  header nav ul li {
+    border: 2px solid #383838;
+    padding: 2px;
+    margin: 2px;
+  }
+
+
+
+  header nav {
+    padding: 0px;
+    margin: 2px 0px 2px 0px;
+  }
+}
+
+header ul li:hover {
+  background-color: pink;
 }

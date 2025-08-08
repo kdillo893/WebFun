@@ -1,38 +1,56 @@
 <!DOCTYPE html>
-<html>
+<!-- This is the homepage for navigating to different modules -->
+<html lang="en-US">
 
 <head>
-    <title>Story Viewer</title>
-    <script defer src="../js/story.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Story - p1</title>
+  <link rel="stylesheet" href="/css/story.css" />
+  <style>
+    strong {
+      color: #6666ff;
+    }
+
+    label {
+      display: block;
+      margin: 10px;
+    }
+    main a {
+      display: block;
+    }
+
+    header nav ul li {
+        width: unset;
+        min-width: unset;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- HTML5 header is a segment denotation (semantic tag)-->
-    <header>
-        <a id="header-title" href="/">
-            <h1>Website Demos</h1>
-        </a>
-        <nav>
-            <ul>
-                <li><a class="links" href="/media.html">Media Examples</a></li>
-                <li><a class="links" href="/mypage.html">Simple Page</a></li>
-                <li><a class="links" href="/myform.html">Form Example</a></li>
-                <li><a class="links" href="/w3c">W3C Examples</a></li>
-                <li><a class="links" href="/quiz.html">Style Quiz</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div id="insert-above"></div>
-    <main>
-        
-        <!-- <button onclick="previousPage()">&gt;</button> -->
+  <!-- HTML5 header is a segment denotation (semantic tag)-->
+  <header>
+    <a id="header-title" href="/">
+      <h1>Website Demos</h1>
+    </a>
+    <nav>
+      <ul>
+        <li><a class="links">&lt;</a></li>
+        <li><a class="links" href="./">Story home</a></li>
+        <li><a class="links" href="./p2.html">&gt;</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <button onclick="nextPage()">&gt;</button>
+  <main>
+      <h2>The beginning of the story</h2>
+    <section>
+        <p>Once upon a time, ... something happened!</p>
+        <img src="" />
+    </section>
+  </main>
 
-
-    </main>
-    
-
+  <!--#include virtual="includes/footer.html" -->
 </body>
 
 </html>
