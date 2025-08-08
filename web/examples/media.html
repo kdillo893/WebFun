@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/defaults.css" />
 </head>
 
-<body>
+<body style="min-height: 3000px;">
     <!-- HTML5 header is a segment denotation (semantic tag)-->
     <header>
         <a id="header-title" href="/">
@@ -28,7 +28,7 @@
     <!-- apache serverside includes -->
     <!--#include virtual="includes/header.html" -->
 
-    <main>
+    <main style="height: 1000px;">
         <h2>HTML 5 special tags</h2>
         <h3>Star wars sound</h3>
         <div>
@@ -43,11 +43,12 @@
             </video>
             <p>
                 Your browser doesn't support HTML video. Here is a
-                <a href="myVideo.mp4" download="myVideo.mp4">link to the video</a> instead.
+                <a href="media/myVideo.mp4" download="myVideo.mp4">link to the video</a> instead.
             </p>
         </div>
 
         <h3>iframes pull content from other websites</h3>
+
         <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" width="400" height="300" frameborder="0">
             This Should Not Show
         </iframe>

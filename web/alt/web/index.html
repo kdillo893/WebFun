@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!-- This is the homepage for navigating to different modules -->
-<html lang="en-us">
+<html lang="en-US">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>List of Demos</title>
-
+  <link rel="stylesheet" href="css/defaults.css" />
   <style>
     strong {
       color: #6666ff;
@@ -22,15 +22,29 @@
 <body>
   <!-- HTML5 header is a segment denotation (semantic tag)-->
   <header>
-    <h1>Website Demos</h1>
-    <!-- apache serverside includes -->
-    <!--echo var="DATE_LOCAL" -->
+    <a id="header-title" href="/">
+      <h1>Website Demos</h1>
+    </a>
+    <nav>
+      <ul>
+        <li><a class="links" href="media.html">Media Examples</a></li>
+        <li><a class="links" href="mypage.html">Simple Page</a></li>
+        <li><a class="links" href="myform.html">Form Example</a></li>
+        <li><a class="links" href="w3c">W3C Examples</a></li>
+        <li><a class="links" href="questions/">Questions</a></li>
+        <li><a class="links" href="startlinks.html">Example CSS</a></li>
+        <li><a class="links" href="javascript.html">JavaScript Examples</a></li>
+        <li><a class="links" href="cssExamples.html">CSS Examples</a></li>
+
+      </ul>
+    </nav>
   </header>
   <!-- apache serverside includes -->
   <!--#include virtual="includes/header.html" -->
 
-  <div>
+  <main>
     <section>
+      <h2>HTML Tags</h2>
       <!-- HTML5 nav is a segment denotation (semantic tag)-->
       <div>
         <h1>this is a header 1 tag <strong>&lt;h1&gt;</strong> :)</h1>
@@ -41,17 +55,17 @@
           <br />
           <input type="text" name="myText">--this is an input tag <strong>&lt;input&gt;</strong> :]</input>
         </label>
-
         <label>Check this box:
           <input type="checkbox" name="checkThis"></input>
         </label>
-        <!-- style="padding: 20px; background-color: #482136;" -->
-        <img src="image.png" height="150" width="200" />
+        <img src="./media/image.png" height="150" width="200" alt="Mr. D. Doodle"
+          style="float:right;padding: 20px; background-color: #482136;">
         <strong>&lt;img&gt;</strong>
+        </img>
         <br />
-        <b>BOLD TEXT</b>
+        <b>BOLD TEXT</b><strong>&lt;b&gt;</strong>
         <br />
-        <i>italic text</i>
+        <i>italic text</i><strong>&lt;i&gt;</strong>
         <br />
         <a href="." target="_blank">This is opens a new window here <strong>&lt;a&gt;</strong></a>
         <br />
@@ -78,7 +92,7 @@
 
       </div>
     </section>
-  </div>
+  </main>
 
   <!--#include virtual="includes/footer.html" -->
 </body>

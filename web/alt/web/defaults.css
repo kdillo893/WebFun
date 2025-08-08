@@ -39,6 +39,9 @@ header nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  /* padding inline is default 40px, need override */
+  padding-inline-start: 0px;
 }
 
 header nav ul li {
@@ -47,6 +50,8 @@ header nav ul li {
   margin: 6px;
   transition: background-color 0.5s ease-in-out;
   /* transition: background-color 1.5s ease-out; */
+
+  border-radius: 4px;
 }
 
 /* Style the footer */
