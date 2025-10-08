@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- This is the homepage for navigating to different modules -->
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List of Demos</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <script src="js/home.js"></script>
+</head>
+
+<body>
+  <!-- HTML5 header is a segment denotation (semantic tag)-->
+  <header>
+    <h1>Random Demos</h1>
+    <!-- testing apache serverside includes -->
+    <!--#include virtual="includes/header.html" -->
+    <!--#echo var="DATE_LOCAL" -->
+
+  </header>
+
+  <div>
+    <section>
+      <!-- HTML5 nav is a segment denotation (semantic tag)-->
+      <div>
+        <h1>this is a silly thing</h1>
+      </div>
+    </section>
+  </div>
+
+  <!--#include virtual="includes/footer.html" -->
+</body>
+
+</html>
