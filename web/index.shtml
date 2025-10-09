@@ -39,7 +39,7 @@
         <label>Check this box:
           <input type="checkbox" name="checkThis"></input>
         </label>
-        <img src="./images/image.png" height="150" width="200" alt="Mr. D. Doodle"
+        <img src="./media/image.png" height="150" width="200" alt="Mr. D. Doodle"
           style="float:right;padding: 20px; background-color: #482136;">
         <strong>&lt;img&gt;</strong>
         </img>
