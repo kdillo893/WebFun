@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- This is the homepage for navigating to different modules -->
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List of Demos</title>
+  <link rel="stylesheet" href="./css/defaults.css" />
+  <style>
+    strong {
+      color: #6666ff;
+    }
+
+    label {
+      display: block;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HTML5 header is a segment denotation (semantic tag)-->
+  <?php
+    // for "root is repo root"
+    //include($_SERVER['DOCUMENT_ROOT']."/web/includes/header.shtml");
+    //for "root is web"
+    include($_SERVER['DOCUMENT_ROOT']."/includes/header.shtml");
+  ?>
+
+  <main>
+    <section>
+      <h2>HTML Tags</h2>
+      <!-- HTML5 nav is a segment denotation (semantic tag)-->
+      <div>
+        <h1>this is a header 1 tag <strong>&lt;h1&gt;</strong> :)</h1>
+        <p>this is a paragraph tag <strong>&lt;p&gt;</strong> :O</p>
+        <span>this is a span/text tag <strong>&lt;span&gt;</strong> :S</span>
+        <br />
+        <label>This is a label for your input <strong>&lt;label&gt;</strong>:[
+          <br />
+          <input type="text" name="myText">--this is an input tag <strong>&lt;input&gt;</strong> :]</input>
+        </label>
+        <label>Check this box:
+          <input type="checkbox" name="checkThis"></input>
+        </label>
+        <img src="./media/image.png" height="150" width="200" alt="Mr. D. Doodle"
+          style="float:right;padding: 20px; background-color: #482136;">
+        <strong>&lt;img&gt;</strong>
+        </img>
+        <br />
+        <b>BOLD TEXT</b><strong>&lt;b&gt;</strong>
+        <br />
+        <i>italic text</i><strong>&lt;i&gt;</strong>
+        <br />
+        <a href="." target="_blank">This is opens a new window here <strong>&lt;a&gt;</strong></a>
+        <br />
+        <a href="." onclick="alert('hello!')">This says something</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <?php
+    include($_SERVER['DOCUMENT_ROOT']."includes/footer.shtml");
+  ?>
+</body>
+
+</html>
