@@ -45,7 +45,7 @@
           <input type="checkbox" name="checkThis"></input>
         </label>
         <img src="./media/image.png" height="150" width="200" alt="Mr. D. Doodle"
-          style="float:right;padding: 20px; background-color: #482136;">
+          style="padding: 20px; background-color: #482136;">
         <strong>&lt;img&gt;</strong>
         </img>
         <br />
@@ -61,7 +61,7 @@
   </main>
 
   <?php
-    include($_SERVER['DOCUMENT_ROOT']."includes/footer.shtml");
+    include($_SERVER['DOCUMENT_ROOT']."/includes/footer.html");
   ?>
 </body>
 
