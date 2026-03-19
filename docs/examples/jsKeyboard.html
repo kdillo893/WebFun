@@ -2,44 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript keyboard listener</title>
-    <script defer src="js/keyboardListener.js"></script>
-    <style>
-        div {
-            margin: 12px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript keyboard listener</title>
+  <script defer src="../js/keyboardListener.js"></script>
+  <style>
+    div {
+      margin: 12px;
+    }
 
-        #calculator-results {
-            scrollbar-width: 30px;
-            scrollbar-color: orange;
-        }
-    </style>
+    #calculator-results {
+      scrollbar-width: 30px;
+      scrollbar-color: orange;
+    }
+  </style>
 </head>
 
 <body>
-    <h1>Our stuff will go here!</h1>
-    <button onclick="clearOutput()">Clear</button>
-    <div id="output-element">
-    </div>
+  <h1>Our stuff will go here!</h1>
+  <button onclick="clearOutput()">Clear</button>
+  <div id="output-element">
+  </div>
 
 
-    <div style="width: 550px;">
-        <button onclick="clearCalculator()">Clear Calculator</button>
-        <input name="leftNumber" type="number" />
-        <input name="rightNumber" type="number" />
-        <button onclick="calculate(this.innerText)">+</button>
-        <div style="height: 300px;overflow-y: scroll; "
-                id="calculator-results"></div>
-    </div>
+  <div style="width: 550px;">
+    <button onclick="clearCalculator()">Clear Calculator</button>
+    <input name="leftNumber" type="number" />
+    <input name="rightNumber" type="number" />
+    <button onclick="calculate(this.innerText)">+</button>
+    <div style="height: 300px;overflow-y: scroll; " id="calculator-results"></div>
+  </div>
 
-
-
-
-
-
-    <!-- 
+  <!-- 
 
 
     <p>
@@ -54,13 +48,12 @@
 
     </div> -->
 
-    <div id="click-box" 
-            style="background-color: aqua;
+  <div id="click-box" style="background-color: aqua;
                 height: 300px; width: 300px;
                 display: flex; justify-content: center;
                 align-items: center;">
-        <h1>This box will listen to Clicks!</h1>
-    </div>
+    <h1>This box will listen to Clicks!</h1>
+  </div>
 </body>
 
 </html>
