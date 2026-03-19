@@ -22,10 +22,7 @@
 <body>
   <!-- HTML5 header is a segment denotation (semantic tag)-->
   <?php
-    // for "root is repo root"
-    //include($_SERVER['DOCUMENT_ROOT']."/web/includes/header.shtml");
-    //for "root is web"
-    include($_SERVER['DOCUMENT_ROOT']."/includes/header.shtml");
+  include($_SERVER['DOCUMENT_ROOT'] . "/includes/header.shtml");
   ?>
 
   <main>
@@ -61,7 +58,7 @@
   </main>
 
   <?php
-    include($_SERVER['DOCUMENT_ROOT']."/includes/footer.html");
+  include($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.html");
   ?>
 </body>
 
