@@ -1,5 +1,9 @@
 # Web fun running things
 
+This is a set of various web development examples and exercises compiled for teaching younger learners, primarily worked on for the benefit of Naperville Youth Club and also for my own front-end skill refresher.
+
+Most of this can be run on with a simple web server launch, but some pages with PHP and server-side includes require running one of the below HTTP servers with proper configuration.
+
 ## Install
 Make sure you have apache. If not, you can load the folder into vscode
 and let it run locally rather than do fancy stuff.
