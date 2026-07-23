@@ -1,0 +1,39 @@
+.show-results {
+    #q1 {
+        color: #FF00FF;
+        background-color: #00ff00;
+    }
+
+    #q2 {
+        background-image: url("/media/image.png");
+        height: 15px;
+    }
+
+    #q3 {
+        height: 20vh;
+    }
+
+    #q4 {
+        border: 2px dashed black;
+    }
+
+    #q5 {
+        padding: 10px;
+    }
+}
+
+
+/* selectors Examples */
+/* #selector-quiz */
+
+/* #butterfly-1 */
+/* .links */
+/* div.box */
+/* p span */
+/* a:link */
+/* a:visited -- not valid */
+p:hover,
+button:active,
+#selector-quiz nav ul li {
+    background-color: orange;
+}

@@ -35,7 +35,7 @@ body {
 
 .box {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-content: center;
 
     height: 200px;

@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Table Flip</title>
+    <style>
+        /* button {
+                background-color: #ff00ff;
+                padding: 10px;
+                border: 4px black groove;
+             }
+
+                /* 0123456789abcdef 10 */
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        button:active {
+            background-color: aqua;
+        }
+
+        a:visited {
+            color:orange;
+        }
+
+
+        div {
+            /* border-color: blue; */
+            /* border-width: 1px; */
+            /* border-style:groove; */
+            padding:20px;
+            margin: 10px;
+            border: solid blue 10px;
+            background-color: aquamarine;
+
+
+            background-image: url("media/image.png");
+            background-size: 200px;
+
+            height: 1000px;
+
+
+            /* background-repeat:no-repeat; */
+            /* text-align: center; */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <a href="newpage.html">newpage</a>
+
+    <!-- This does nothing! -->
+
+    <i><b>hahaha</b></i>
+    <code>code text</code>
+    <blockquote>
+        <q>quoted</q>
+    </blockquote>
+
+
+    <button onclick="changeColor()">silly button</button>
+
+    <button onclick="alert('no')">
+        no
+    </button>
+
+    <div>
+        <input type="text">
+        <input type="number">
+        <input type="date">
+        <textarea name="" id=""></textarea>
+    </div>
+
+    <div style="background-color: rgb(185, 122, 39);">
+        Hi something here
+    </div>
+ 
+
+
+
+    <script>
+        console.log('Cheese');
+
+        function changeColor() {
+
+            let bodyEl = document.body;
+
+            //0123456789abcdef
+            let redColor = Math.random() * 256;
+            let greenColor = Math.random() * 256;
+            let blueColor = Math.random() * 256;
+
+            bodyEl.style.backgroundColor = `rgb(${redColor}, ${greenColor}, ${blueColor})`;
+        }
+
+
+    </script>
+</body>
+
+</html>

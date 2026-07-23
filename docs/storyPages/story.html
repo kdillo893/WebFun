@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Story</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0px;
+            background-color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #story {
+            background-color: aquamarine;
+            min-height: 100px;
+            min-width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="story">
+
+
+    </div>
+
+</body>
+
+<script>
+    const storyElement = document.getElementById("story");
+
+    let textOutput = "Once upon a time, ... something happened!";
+    let buttonText = "Go to mars?";
+    let state1 = "home";
+
+    let textOutput2 = "Silly Goose!";
+    let buttonText2 = "Go back!";
+    let state2 = "mars";
+
+
+    const storyText = {
+        startGame: {
+            textOut: "this is something",
+            buttonText: "click me",
+            link: "wentLeft"
+        },
+        wentLeft: {
+            textOut: "this is something",
+            buttonText: "click me",
+            link: "startGame"
+        },
+
+
+    }
+
+    //1.) created a paragraph tag, put text inside of it
+    const newParagraph = document.createElement("p");
+    newParagraph.innerText = textOutput;
+    
+    //2.) 
+    storyElement.appendChild(newParagraph);
+
+    
+    const newButton = document.createElement("button");
+    newButton.innerText = buttonText;
+    storyElement.appendChild(newButton);
+
+
+    function buttonClick(p1) {
+        console.log("hi");
+        console.log(p1.target);
+    }
+
+    newButton.addEventListener("click", buttonClick);
+
+
+</script>
+
+
+</html>

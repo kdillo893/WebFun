@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form</title>
+  <style></style>
+  <style>
+    label {
+      display: block;
+    }
+  </style>
+</head>
+
+<body style="background-color: darkslategray;">
+
+  <h1>Cool Stuff</h1>
+  <form id="theform" method="POST" action="http://192.168.12.214:8080/">
+  <!-- <form id="theform"> -->
+  <!-- <form id="theform" method="post" > -->
+    <input name="my_name" />
+
+    <input id="num" name="number" type="number" />
+    <button onclick="guess(); event.preventDefault()">Guess</button>
+    <div id="output">
+
+    </div>
+    <input name="the_date" type="date" />
+
+    <h2>Favorite Fruits</h2>
+    <label>
+      Orange
+      <input name="orange" type="radio" />
+    </label>
+
+    <label>
+      Apple
+      <input name="apple" type="radio" />
+    </label>
+    <label>
+      Banana
+      <input name="banana" type="radio" />
+    </label>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+  <script src="form.js" defer ></script>
+
+</body>
+
+<script></script>
+
+</html>

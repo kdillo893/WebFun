@@ -1,3 +1,14 @@
-w3c/
-w3cschools/
+# Testing godot web assembly export
+testGame/
+testGameFromGodot/
+
+bootstrap-5.3.7-examples/
+
+.env
+
+images/
+
+pokemonCards/
+
+.vscode/
 

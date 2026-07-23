@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <style>
+        #game td {
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            font-size: 75px;
+        }
+
+        #game td div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        th {
+            border: 2px solid black;
+            min-width: 110px;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="game">
+        <tr>
+            <td onclick="changevalue(this)"></td>
+            <td onclick="changevalue(this)"></td>
+            <td onclick="changevalue(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="changevalue(this)"></td>
+            <td onclick="changevalue(this)"></td>
+            <td onclick="changevalue(this)"></td>
+        </tr>
+        <tr>
+            <td onclick="changevalue(this)"></td>
+            <td onclick="changevalue(this)"></td>
+            <td onclick="changevalue(this)"></td>
+        </tr>
+    </table>
+
+    <button onclick="clear()
+    ">clear</button>
+
+    <h1>TODO later</h1>
+
+
+    <div>
+        <h2>Scores</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>X Wins</th>
+                    <th>O Wins</th>
+                    <th>Ties</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="tictactoe.js"></script>
+</body>
+
+</html>

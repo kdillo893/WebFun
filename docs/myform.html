@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- This is originally distributed by Naperville Youth Club 
+    Instructors for the purposes of teaching forms in the Web Development
+    curriculum. This is not my original work, but modified to suit
+    the evolving landscape of front-end development
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>My Form</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--modern version of the above; no need for text/html declaration-->
+  <meta charset="utf-8" />
+  <!-- <link href="css/mystyle1.css" rel="stylesheet" type="text/css" /> -->
+  <!-- <link href="css/defaults.css" rel="stylesheet" type="text/css" /> -->
+  <script defer>
+    function formAlert(formData) {
+      console.log(formData);
+      alert(formData);
+    }
+
+  </script>
+  <script src="js/form.js"></script>
+  <script defer src="js/dynamicHeader.js"></script>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+
+        }
+
+    h1 , a{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a id="header-title" href="/">
+      <h1>Website Demos</h1>
+    </a>
+    <nav>
+      <ul>
+        <li><a class="links" href="/media.html">Media Examples</a></li>
+        <li><a class="links" href="/mypage.html">Simple Page</a></li>
+        <li><a class="links" href="/myform.html">Form Example</a></li>
+        <li><a class="links" href="/w3c">W3C Examples</a></li>
+        <li><a class="links" href="/questions/">Questions</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="header">
+    <h1>My Form</h1>
+  </div> <!-- end of header div -->
+  <div id="bodycontent">
+    <form method="get" action="form-submit.html">
+      <div>
+        <label for="name-input">Enter your name:
+          <input type="text" name="yourname" id="name-input" />
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="radio" name="rad" value="good">good
+        </label>
+        <label>
+          <input type="radio" name="rad" value="bad">bad
+        </label>
+        <label>
+          <input type="radio" name="rad" value="worse">worse
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" name="chk">worse
+        </label>
+      </div>
+      <div>
+        <textarea name="description"></textarea>
+      </div>
+      <div>
+        <select name="input-method">
+          <option>keyboard</option>
+          <option>controller</option>
+          <option>mouse</option>
+        </select>
+      </div>
+      <div>
+        <input type="color" name="color-input" />
+      </div>
+      <div>
+        <input type="search" name="search-input" />
+      </div>
+      <div>
+        <input type="date" name="date-input" />
+      </div>
+      <div>
+        <label>
+          <input type="range" name="volume" id="volume-input" min="0" max="11" step="1" value="5" />
+          <p>
+            <span>Volume: </span>
+            <output id="volume-display"></output>
+          </p>
+        </label>
+        <script>
+          const volDisplay = document.querySelector("#volume-display");
+          const volInput = document.querySelector("#volume-input");
+          volDisplay.textContent = volInput.value;
+          volInput.addEventListener("input", (event) => {
+            volDisplay.textContent = event.target.value;
+          });
+        </script>
+      </div>
+      <div>
+        <input type="email" name="email-input" />
+      </div>
+      <!-- <div>
+        <button type="button" onclick="formAlert(formData)">Submit</button>
+      </div> -->
+      <div>
+        <button type="submit" onclick="formAlert(formData)">Submit</button>
+      </div>
+    </form>
+    <!-- <h1 id="display-text"></h1> -->
+  </div> <!-- end of bodycontent div -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <form>
+    <input name="my_name" />
+
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

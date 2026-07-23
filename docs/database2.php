@@ -14,7 +14,7 @@
   $db_url = 'localhost';
   $db_dbname = 'mydatabase';
   $db_user = 'mydbuser';
-  $db_password = 'FAKE_PASSWORD_213$$';
+  $db_password = 'SMlfOsNAF@@HxH0a';
   
   $connect = mysqli_connect($db_url, $db_user, $db_password, $db_dbname);
   

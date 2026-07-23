@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Fun</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        div {
+            margin:10px;
+            height: 200px;
+            width: 200px;
+            background-color: orange;
+            transition: all 1s;
+        }
+
+        #fun:hover {
+            transform: rotate(180deg) scale(2) translate(-100px,50px);
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <!-- <div id="rotate">fun</div>
+    <div id="grow"></div> -->
+
+    <div id="fun"></div>
+
+    <button onclick="transformBox()">ZOOM!</button>
+    
+
+</body>
+<script>
+    function transformBox() {
+        const boxFun = document.getElementById("fun");
+
+        boxFun.style.transform = "rotate(90)";
+
+
+    }
+</script>
+
+</html>

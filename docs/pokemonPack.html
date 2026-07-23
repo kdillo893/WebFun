@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pack</title>
+    <style>
+        #cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #cards img {
+            height: 105px;
+            width: 75px;
+            border: 1px yellow solid;
+        }
+    </style>
+
+
+    <script>
+        let ourCards = [
+            "pokemonCards/mega_darkrai.png",
+            "pokemonCards/banette.webp",
+            "pokemonCards/mega_zeraora.png",
+            "pokemonCards/lampent.webp",
+            "pokemonCards/litwick.webp",
+            "pokemonCards/mega_chandelure.webp",
+            "pokemonCards/mega_slowbro.webp",
+            "pokemonCards/misty_vitality_secret.webp",
+            "pokemonCards/morpeko.webp",
+            "pokemonCards/primarina.webp",
+            "pokemonCards/rampardos_ex.webp",
+            "pokemonCards/shuppet.webp",
+            "pokemonCards/toucannon.webp",
+            "pokemonCards/voltaic_energy.webp",
+        ];
+
+        function cardImageElement(imageUrl) {
+            const element = document.createElement("img");
+            element.src = imageUrl;
+            element.alt = "Card Image from Pokemon Packs"
+
+            return element;
+        }
+
+        function randomPack() {
+            const cardList = document.getElementById("cards");
+
+            //clear the card list
+            cardList.innerHTML = "";
+
+            //randomly create 10 cards, one energy, one "code card" (can just be blank image for now.)
+            for (let i = 0; i < 10; i++) {
+                //random number choice
+                const randomCardIndex = Math.floor(Math.random() * ourCards.length);
+
+                const cardElement = cardImageElement(ourCards[randomCardIndex]);
+
+                cardList.appendChild(cardElement);
+            }
+
+            //energy
+
+            //green card
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <button onclick="randomPack()">Random Pack</button>
+    <div id="cards">
+
+    </div>
+
+
+</body>
+
+</html>

@@ -60,7 +60,7 @@ a:active {
 #navigation {
   width: 180px;
   height: 484px;
-  background: grey url(backgrounds/nav-bg.jpg) no-repeat;
+  background: gray url(backgrounds/nav-bg.jpg) no-repeat;
 }
 
 #header {

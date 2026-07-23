@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindromes</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        div {
+            margin: 15px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="newstyles.css">
+</head>
+
+<body>
+    <h1>words and arrays</h1>
+    <div>
+        <input type="text" name="words" id="wordInput">
+        <button onclick="checkPalindrome()">Check Word Palindrome</button>
+        <div id="is-palindrome">
+
+        </div>
+    </div>
+
+    <div>
+        <button onclick="randomWord()">
+            Random Word
+        </button>
+
+        <div id="random">
+        </div>
+    </div>
+
+</body>
+<script>
+    function checkPalindrome() {
+        const inputBox = document.getElementById("wordInput");
+        const inputWords = inputBox.value;
+
+        //loop over all words, console.log
+        //  inside loop to print each
+        for (let i = 0; i < inputWords.length; i++) {
+            console.log();
+
+            if (inputWords[i] != inputWords[inputWords.length - i - 1]) {
+                const outputBox = document.getElementById("is-palindrome");
+                outputBox.innerText = "Not a Palindrome";
+                return;
+            }
+        }
+        
+        const outputBox = document.getElementById("is-palindrome");
+        outputBox.innerText = "Is a Palindrome";
+        return;
+
+
+
+    }
+
+    function randomWord() {
+
+        let words = ["cat", "dog",
+            "car", "orange", "baseball", "football",
+            "programming", "style", "corn", "chips", "popcorn"
+        ];
+
+        const randomDiv = document.getElementById("random");
+
+        let randomNum = Math.random() // 0 and 1.
+        console.log("length=", words.length);
+        console.log(randomNum * words.length);
+        console.log(Math.floor(randomNum * words.length));
+
+        randomDiv.innerText = words[Math.floor(randomNum * words.length)];
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    let word1 = "supercalifragilisticexpialidocious"
+    let word2 = "pneumonoultramicroscopicsilicovolcanoconiosis"
+
+    for (let i = 0; i < word1.length; i++) {
+        let thisLetter = word1.charAt(i);
+        console.log(`${i}: ${thisLetter}`);
+    }
+
+    // ""
+    // ``
+
+
+    for (let i = 2; i < 21; i++) {
+        console.log(i);
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

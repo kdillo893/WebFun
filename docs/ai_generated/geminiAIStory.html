@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lost Artifact - CYOA Game</title>
+    <style>
+        :root {
+            --bg-color: #1e1e2e;
+            --text-color: #cdd6f4;
+            --card-bg: #313244;
+            --accent-color: #cba6f7;
+            --hover-color: #b4befe;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #game-container {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            border: 2px solid var(--accent-color);
+        }
+
+        #story-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            white-space: pre-line;
+        }
+
+        #choices-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        button {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 2px solid var(--accent-color);
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-family: inherit;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: left;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            transform: translateX(5px);
+        }
+
+        .restart-btn {
+            border-color: var(--hover-color);
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="game-container">
+        <div id="story-text">Loading adventure...</div>
+        <div id="choices-container"></div>
+    </div>
+
+    <script>
+        // Game State Engine Mapping Nodes
+        const storyNodes = {
+            start: {
+                text: "You stand at the entrance of a forgotten jungle temple. Vines cover ancient stone doors, and a damp, mysterious wind blows from within. What do you do?",
+                choices: [
+                    { text: "Light a torch and step inside the temple.", target: "enter_temple" },
+                    { text: "Examine the exterior walls for hidden runes.", target: "read_runes" }
+                ]
+            },
+            enter_temple: {
+                text: "Inside, the air is heavy. You walk down a long hallway until you reach a split path. To the left, you hear the faint sound of rushing water. To the right, you see a flickering golden light.",
+                choices: [
+                    { text: "Head left toward the water sound.", target: "water_room" },
+                    { text: "Head right toward the golden light.", target: "gold_room" }
+                ]
+            },
+            read_runes: {
+                text: "You brush away moss and find ancient warnings written in blood-red ink: 'He who enters without an offering becomes the offering.' Suddenly, a deadly trapdoor opens beneath you! Game Over.",
+                choices: [
+                    { text: "🔄 Try Again", target: "start" }
+                ]
+            },
+            water_room: {
+                text: "You discover an underground river blocking your path. A rotten wooden boat is tied to a post. Across the river, you see the exit.",
+                choices: [
+                    { text: "Risk the boat and row across.", target: "boat_sink" },
+                    { text: "Swim across the dark waters.", target: "swim_fail" }
+                ]
+            },
+            gold_room: {
+                text: "You enter a grand chamber. On a pedestal sits a diamond-encrusted skull. It glows with immense power. Next to it sits a rusty iron key.",
+                choices: [
+                    { text: "Grab the glowing skull.", target: "skull_trap" },
+                    { text: "Take the rusty iron key and leave.", target: "win_game" }
+                ]
+            },
+            boat_sink: {
+                text: "The wooden boat breaks apart halfway across! You are dragged down into the dark abyss by the current. Game Over.",
+                choices: [
+                    { text: "🔄 Try Again", target: "start" }
+                ]
+            },
+            swim_fail: {
+                text: "The water is freezing, and prehistoric cave-dwelling creatures pull you under. You did not survive. Game Over.",
+                choices: [
+                    { text: "🔄 Try Again", target: "start" }
+                ]
+            },
+            skull_trap: {
+                text: "The moment you lift the skull, the temple ceilings begin to collapse! Boulder strikes crush the exit. You are trapped forever. Game Over.",
+                choices: [
+                    { text: "🔄 Try Again", target: "start" }
+                ]
+            },
+            win_game: {
+                text: "Smart move! You avoid the obvious trap. The key fits a locked escape door in the back wall, leading you out safely into the sunrise with your life intact. Victory!",
+                choices: [
+                    { text: "🎉 Play Again", target: "start" }
+                ]
+            }
+        };
+
+        // Render function to handle state updates
+        function showNode(nodeId) {
+            const node = storyNodes[nodeId];
+            const storyTextDiv = document.getElementById("story-text");
+            const choicesContainer = document.getElementById("choices-container");
+
+            // Update text
+            storyTextDiv.innerText = node.text;
+
+            // Clear old buttons
+            choicesContainer.innerHTML = "";
+
+            // Create new buttons
+            node.choices.forEach(choice => {
+                const button = document.createElement("button");
+                button.innerText = choice.text;
+
+                // Add conditional style for reset paths
+                if (choice.target === 'start') {
+                    button.classList.add('restart-btn');
+                }
+
+                button.addEventListener("click", () => showNode(choice.target));
+                choicesContainer.appendChild(button);
+            });
+        }
+
+        // Initialize game
+        showNode("start");
+    </script>
+</body>
+
+</html>

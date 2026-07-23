@@ -22,7 +22,7 @@ function keyLogger(event, fileout) {
     }
 }
 
-function changeText(event) {
+function changeText1(event) {
     if (event == null) {
         return;
     }
@@ -43,7 +43,26 @@ function changeText(event) {
     }
 }
 
-document.addEventListener("keydown", changeText);
+function changeText2(event) {
+    if (event == null) {
+        return;
+    }
+
+    const key = event.key;
+
+    if (key) {
+        //step1
+        const outputElement = document.getElementById("output-element");
+
+        //step2
+
+
+        //step 3
+        outputElement.innerText += key;
+    }
+}
+
+document.addEventListener("keydown", changeText2);
 
 function clearOutput() {
     const outputElement = document.getElementById("output-element");
@@ -51,8 +70,8 @@ function clearOutput() {
 }
 
 function addNumbers() {
-    const leftInput = document.querySelector("input[name='leftNumber'");
-    const rightInput = document.querySelector("input[name='rightNumber'");
+    const leftInput = document.querySelector("input[name='leftNumber']");
+    const rightInput = document.querySelector("input[name='rightNumber']");
 
     if (leftInput.value == null || rightInput.value == null) {
         return;
@@ -113,12 +132,25 @@ function clearCalculator() {
 
 // clicking event listeners
 const clickBox = document.getElementById("click-box");
-
 const headingsInBox = clickBox.getElementsByTagName("h1");
+
+
+// let key = document.getElementById("image");
+// console.log(key.style.display == "none");
+
+
 let h1Inside = null;
 if (headingsInBox != null && headingsInBox.length > 0) {
     h1Inside = headingsInBox[0];
 }
+
+
+// function clickedBox() {
+//     h1Inside.innerText = "CHANGED!";
+// }
+
+// clickBox.addEventListener("click", clickedBox);
+
 
 function showClickEvent(event) {
     console.log(event);
@@ -133,7 +165,6 @@ clickBox.addEventListener("click", showClickEvent);
 //Don't type this yet;
 // const outputElement = document.getElementById("key-output");
 // const outLine = document.createElement("p");
-// const 
 // outputElement.appendChild()
 
 

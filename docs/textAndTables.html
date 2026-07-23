@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Text Changes</title>
+
+    <style>
+        #tictactoe td {
+            border: 1px solid black;
+            height: 50px;
+            width: 50px;
+
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        let playerTurn = "X";
+
+        function insertPlayer(el) {
+            if (el.innerText == "X" || el.innerText == "O") {
+                return;
+            }
+
+            el.innerText = playerTurn;
+
+            if (playerTurn == "X") {
+                playerTurn = "O"
+            } else {
+                playerTurn = "X"
+            }
+        }
+
+        function restartGame() {
+            playerTurn = "X";
+
+            let game = document.getElementById("tictactoe");
+
+            let tdElements = game.getElementsByTagName("td");
+
+            console.log(tdElements);
+            console.log(tdElements[0]);
+            console.log(tdElements[8]);
+
+            for (let i = 0; i < tdElements.length; i++) {
+                const td = tdElements[i];
+                td.innerHTML = "";
+                td.innerText = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <i>italics</i>
+    <b>bold</b>
+    <em>Italics</em>
+    <code>code text goes here</code>
+    <q>quote text lol</q>
+    <blockquote>This is from a guy</blockquote>
+    <span>- Guy said this</span>
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Grade</td>
+                <td>Coding Class</td>
+                <td>WPM</td>
+                <td>% Accuracy</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mr. D</td>
+                <td>College Graduate</td>
+                <td>Web Development</td>
+                <td>81</td>
+                <td>97%</td>
+            </tr>
+            <tr>
+                <td>[Student2]</td>
+                <td>4th</td>
+                <td>Web Development</td>
+                <td>23</td>
+                <td>94%</td>
+            </tr>
+            <tr>
+                <td>[Student3]</td>
+                <td>4th</td>
+                <td>Web Development</td>
+                <td>14</td>
+                <td>94%</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <h1>TicTacToe</h1>
+    <table id="tictactoe">
+        <tbody>
+            <tr>
+                <td onclick="insertPlayer(this)"></td>
+                <td onclick="insertPlayer(this)"></td>
+                <td onclick="insertPlayer(this)"></td>
+            </tr>
+            <tr>
+                <td onclick="insertPlayer(this)"></td>
+                <td onclick="insertPlayer(this)"></td>
+                <td onclick="insertPlayer(this)"></td>
+
+            </tr>
+            <tr>
+                <td onclick="insertPlayer(this)"></td>
+                <td onclick="insertPlayer(this)"></td>
+                <td onclick="insertPlayer(this)"></td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <button onclick="restartGame()">Restart</button>
+</body>
+
+
+
+</html>

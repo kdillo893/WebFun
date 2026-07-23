@@ -1,40 +1,19 @@
-/**
- * load this on a page with script tag, read input and have people guess for a passwrod.
- */
-
-// const MY_PASSWORD = 12321;
-
-function isCorrectPassword(guess) {
-    if (MY_PASSWORD == guess) {
-        alert("you guessed my password!");
-        return true;
-    } else {
-        alert("Guess again! Wrong!");
-        return false;
-    }
-}
-
-function passwordGame() {
-
-    while (true) {
-        var pwGuess = prompt("Guess my password, it's a number:");
-        let pwNumber = parseInt(pwGuess);
-        if (isCorrectPassword(pwNumber)) {
-            break;
-        }
-    }
-}
-
-passwordGame();
 
 const MY_PASSWORD = 123123;
-let guessWords = prompt("Guess my password", 0);
+function guessPassword() {
 
-let guess = parseInt(guessWords);
-if (MY_PASSWORD == guess) {
-    alert("you guessed my password!");
-    // return true;
-} else {
-    alert("Guess again! Wrong!");
-    // return false;
+    const input = document.getElementById("password");
+
+    let guess = input.value;
+    const output = document.getElementById("output");
+
+    if (MY_PASSWORD == guess) {
+        console.log("you guessed my password!");
+        // return true;
+        output.innerText = "You guessed my password"
+    } else {
+        console.log("Guess again! Wrong!");
+        // return false;
+        output.innerText = "You got it wrong"
+    }
 }

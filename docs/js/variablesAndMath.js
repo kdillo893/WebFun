@@ -44,6 +44,8 @@ var formatString = `${words} like this: ${word}`;
 var boolValue = true;
 var isGreaterThan5 = num > 5;
 
+
+// up to here
 //undefined
 let undefVar;
 let definedVal = "something";
@@ -134,7 +136,7 @@ function doText() {
     // const textEl = document.getElementById("text-here");
     const newText = document.createTextNode("Link Here!");
     newElement.appendChild(newText)
-    newElement.href = "/web/javascriptIo.html";
+    newElement.href = "/javascriptIo.html";
     const textHereElement = document.getElementById("text-here");
 
     textHereElement.appendChild(newElement);

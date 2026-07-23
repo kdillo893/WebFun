@@ -1,0 +1,125 @@
+<html>
+
+<head>
+
+    <style>
+        #gridbox {
+            height: 400px;
+            width: 400px;
+
+            display: grid;
+            /* grid: 1fr 1fr 1fr / 1fr 1fr 1fr; */
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+        }
+
+        #gridbox div {
+            border: 1px solid black;
+            /* min-height: 10px; */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 100px;
+            text-align: center;
+        }
+
+        /** optional */
+        #gridbox div:hover {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gridbox">
+        <div id="first"></div>
+        <div onclick="insertX(this)"></div>
+        <div onclick="insertX(this)"></div>
+        <div onclick="insertX(this)"></div>
+        <div onclick="insertX(this)"></div>
+        <div onclick="insertX(this)"></div>
+        <div onclick="insertX(this)"></div>
+        <div onclick="insertX(this)"></div>
+        <div onclick="insertX(this)"></div>
+    </div>
+
+    <script>
+
+        let turnPlayer = "X";
+        function insertPlayer(element) {
+            element.innerText = turnPlayer;
+            if (turnPlayer == "X") {
+                turnPlayer = "O";
+            } else {
+                turnPlayer = "X";
+            }
+        }
+
+        const firstElement = document.getElementById("first");
+
+        firstElement.addEventListener(
+            "click",
+            function (event) {
+                insertPlayer(event.target);
+            }
+        );
+
+        /**
+         * Extension from before, using event listeners on ALL
+         * the grid boxes
+         */
+        const gridBox = document.getElementById("gridbox");
+        const divsInGrid = gridBox.getElementsByTagName("div");
+
+        const divsArray = Array.from(divsInGrid);
+        console.log(divsArray);
+
+        for (let i = 0; i < divsArray.length; i++) {
+            
+        }
+
+        /**
+         * for in array
+         */
+        for (div in divsArray) {
+
+            div.addEventListener()
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function changeGrid() {
+            const gridBox = document.getElementById("gridbox");
+
+            const columns = 5;
+            const rows = 4;
+            // gridBox.innerHTML = "";
+            for (let i = 0; i < (rows * columns); i++) {
+                const newDiv = document.createElement("div");
+                gridBox.appendChild(newDiv);
+            }
+        }
+    </script>
+    <button onclick="changeGrid()">Funny button</button>
+</body>
+
+
+</html>

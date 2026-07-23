@@ -68,9 +68,15 @@ window.addEventListener("keyup", keyboardListenUp);
 function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
+    //TODO: draw all objects
     drawBox();
     
+    //TODO: move/place ALL objects; have a class for draw-able objects
     moveBox();
+
+    //process interactions for objects
+
+    //
 
     //call game loop after this
     animationId = requestAnimationFrame(gameLoop);
