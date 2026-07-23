@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <head>
     <title>Pack</title>
     <style>
@@ -36,12 +75,30 @@
             "pokemonCards/voltaic_energy.webp",
         ];
 
+
+        let cardCounts = Object.fromEntries(ourCards.map(card => [card, 0]));
+
         function cardImageElement(imageUrl) {
             const element = document.createElement("img");
             element.src = imageUrl;
             element.alt = "Card Image from Pokemon Packs"
 
             return element;
+        }
+
+        function addNewCard() {
+            const cardList = document.getElementById("cards");
+
+            //random number choice
+            const randomCardIndex = Math.floor(Math.random() * ourCards.length);
+
+            const cardSrcImg = ourCards[randomCardIndex];
+            const cardElement = cardImageElement(ourCards[randomCardIndex]);
+
+            cardList.appendChild(cardElement);
+
+            cardCounts[cardSrcImg] = cardCounts[cardSrcImg] + 1;
+
         }
 
         function randomPack() {
@@ -52,12 +109,7 @@
 
             //randomly create 10 cards, one energy, one "code card" (can just be blank image for now.)
             for (let i = 0; i < 10; i++) {
-                //random number choice
-                const randomCardIndex = Math.floor(Math.random() * ourCards.length);
-
-                const cardElement = cardImageElement(ourCards[randomCardIndex]);
-
-                cardList.appendChild(cardElement);
+                addNewCard();
             }
 
             //energy
@@ -66,13 +118,43 @@
 
         }
 
+
+        function showCards() {
+            let countsDiv = document.getElementById("card-counts");
+
+            for (const [key, value] in Object.entries(cardCounts)) {
+
+                console.log(key, value)
+
+            }
+        }
+
     </script>
 </head>
 
 <body>
-
+    <!-- Before -->
     <button onclick="randomPack()">Random Pack</button>
+
+    <!-- after -->
+    <img src="images/pitchBlack.webp"
+            alt="open pack, pitch black card pack"
+            height="100"
+            onclick="randomPack()" />
+
+
+
+
+
+            
     <div id="cards">
+
+    </div>
+
+
+    <button onclick="showCards()">Show card counts</button>
+    <div id="card-counts">
+
 
     </div>
 

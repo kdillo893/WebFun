@@ -77,7 +77,7 @@ function addNumbers() {
         return;
     }
 
-    let sum = parseInt(leftInput.value) + parseInt(rightInput.value);
+    let sum = parseInt(leftInput.valueAsNumber) + parseInt(rightInput.valueAsNumber);
 
     const resultsEl = document.getElementById("calculator-results");
 
@@ -89,38 +89,30 @@ function addNumbers() {
 }
 
 function calculate(operation) {
-    
-    console.log(operation);
-    if (operation == null) {
-        return;
-    }
-
     const leftInput = document.querySelector("input[name='leftNumber']");
     const rightInput = document.querySelector("input[name='rightNumber']");
 
-    if (!leftInput.value || !rightInput.value) {
+    const leftNum = parseFloat(leftInput.value);
+    const rightNum = parseFloat(rightInput.value);
+    
+    let result;
+    if (operation == "+") {
+        result = leftNum + rightNum;
+    } else if (operation == "-") {
+        result = leftNum - rightNum;
+    } else if (operation == "*") {
+        result = leftNum * rightNum;
+    } else if (operation == "/") {
+        result = leftNum / rightNum;
+    } else {
         return;
     }
 
-    let result;
-    const leftNum = parseInt(leftInput.value);
-    const rightNum = parseInt(rightInput.value);
-
-    switch(operation) {
-        case '+':
-            result = leftNum + rightNum;
-            break;
-        case '-':
-            result = leftNum - rightNum;
-    }
-    let sum = parseInt(leftInput.value) + parseInt(rightInput.value);
-
     const resultsEl = document.getElementById("calculator-results");
+    // resultsEl.innerText = result;
 
     const newLine = document.createElement("p");
-    const textNode = document.createTextNode(sum);
-    newLine.appendChild(textNode);
-
+    newLine.innerText = result;
     resultsEl.appendChild(newLine);
 }
 

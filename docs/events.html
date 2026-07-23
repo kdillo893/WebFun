@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+    <script src="events.js"></script>
+</head>
+<body>
+    
+    <button>Clear</button>
+    <div id="output"></div>
+
+    <button onclick="clickHere()">addClass</button>
+    <button onclick="removeClass()">removeClass</button>
+
+
+    <script>
+        const outputEl = document.getElementById("output")
+
+        function clickHere() {
+            outputEl.classList.add("something");
+        }
+
+        function removeClass() {
+            outputEl.classList.remove("something");
+        }
+    </script>
+</body>
+</html>

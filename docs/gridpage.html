@@ -1,5 +1,39 @@
 <html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <head>
 
     <style>
@@ -34,75 +68,93 @@
 </head>
 
 <body>
+    <!-- 
     <div id="gridbox">
-        <div id="first"></div>
-        <div onclick="insertX(this)"></div>
-        <div onclick="insertX(this)"></div>
-        <div onclick="insertX(this)"></div>
-        <div onclick="insertX(this)"></div>
-        <div onclick="insertX(this)"></div>
-        <div onclick="insertX(this)"></div>
-        <div onclick="insertX(this)"></div>
-        <div onclick="insertX(this)"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div> -->
+
+
+    <div id="gridbox">
+        <div onclick="insertPlayer(this)"></div>
+        <div onclick="insertPlayer(this)"></div>
+        <div onclick="insertPlayer(this)"></div>
+        <div onclick="insertPlayer(this)"></div>
+        <div onclick="insertPlayer(this)"></div>
+        <div onclick="insertPlayer(this)"></div>
+        <div onclick="insertPlayer(this)"></div>
+        <div onclick="insertPlayer(this)"></div>
+        <div onclick="insertPlayer(this)"></div>
     </div>
+    
+    <button onclick="resetGame()">Reset</button>
 
     <script>
+        // function insertPlayer(element) {
+        //     console.log(element);
+        //     element.innerText = "X";
+        // }
 
-        let turnPlayer = "X";
+
+
+
+        let turn = "X";
         function insertPlayer(element) {
-            element.innerText = turnPlayer;
-            if (turnPlayer == "X") {
-                turnPlayer = "O";
+            if (element.innerText.length > 0) {
+                return;
+            }
+
+            element.innerText = turn;
+            if (turn == "X") {
+                turn = "O";
             } else {
-                turnPlayer = "X";
+                turn = "X";
             }
         }
 
-        const firstElement = document.getElementById("first");
+        function resetGame() {
+            turn = "X";
 
-        firstElement.addEventListener(
-            "click",
-            function (event) {
-                insertPlayer(event.target);
+            let gridBox = document.getElementById("gridbox");
+            let divsInGrid = gridBox.getElementsByTagName("div");
+
+          
+
+
+            for (let i = 0; i < divsInGrid.length; i++) {
+                let div = divsInGrid[i];
+                div.innerText = "";
             }
-        );
+        }
+
+
+        //for only first element adding event listener.
+        // const firstElement = document.getElementById("first");
+
+        // firstElement.addEventListener(
+        //     "click",
+        //     function (event) {
+        //         insertPlayer(event.target);
+        //     }
+        // );
 
         /**
          * Extension from before, using event listeners on ALL
          * the grid boxes
          */
-        const gridBox = document.getElementById("gridbox");
-        const divsInGrid = gridBox.getElementsByTagName("div");
 
-        const divsArray = Array.from(divsInGrid);
-        console.log(divsArray);
-
-        for (let i = 0; i < divsArray.length; i++) {
-            
-        }
-
-        /**
-         * for in array
-         */
-        for (div in divsArray) {
-
-            div.addEventListener()
-        }
 
 
 
 
     </script>
-
-
-
-
-
-
-
-
-
-
 
 
     <script>

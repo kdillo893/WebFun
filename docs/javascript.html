@@ -44,13 +44,43 @@
 
     <script>
 
-        var sum = 1 + 2;
+        let number = 10;
+        let sum = 1;
+        sum = 10;
 
-        sum += 6;
+        sum = number * 10;
 
+        
+        sum = sum + 6;
+        sum = sum + number;
+        
+        const password = "this is a secret";
+        const password2 = 'this is a secret';
+        const password3 = `this is a secret`;
+        let remainder = 10 % 3;
+
+        console.log(remainder);
+        console.log(remainder++);
+        console.log(remainder--);
+        console.log(remainder);
+
+        sum = 7;
         console.log(sum);
-        // alert(sum);
+        let isSeven = sum == 7;
 
+        console.log(isSeven);
+
+        let trueValue = true;
+        trueValue = !trueValue;
+        console.log(trueValue);
+
+        // alert(12345)
+
+        function printToConsole() {
+            console.log("hello")
+        }
+
+        printToConsole();
 
     </script>
 
@@ -104,6 +134,10 @@
         <h3 id="heading_A">This is some stuff!</h3>
 
     </div>
+
+
+
+    <button onclick="printToConsole()">NEW BUTTON SAYS STUFF</button>
 
 </body>
 

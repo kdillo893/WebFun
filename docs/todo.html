@@ -15,14 +15,34 @@
 </body>
 
 <script>
+    function toggleCheckedClass(el) {
+        if (el.classList.contains("completed")) {
+            
+        }
+    }
+
     function addToDo() {
+
+
         //1.) create an "li" element,
         let something = document.createElement("li");
+
+        //1.5) get the text from the input
+        const inputText = document.getElementById("newTask").value;
+        something.innerText = inputText;
 
         //2.) insert it into the "ul" list element.
         let list = document.getElementById("list");
 
+        list.appendChild(something);
+
+        //3.) function event listener on the list item inserted to have it "toggle checked"
+        
+
     }
+
+    //class for is checked... toggle function for adding that to each list item
+
 </script>
 
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Timer</title>
+
+    <style>
+        body {
+            background-color: orange;
+        }
+
+        #reaction-game {
+            background-color: aqua;
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        #reaction-game.started {
+            background-color: greenyellow;
+        }
+        #reaction-game.waiting {
+            background-color: red;
+        }
+
+        .box {
+
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Interval Example</h3>
+    <button onclick="startIntervalConsole()">Start Example</button>
+    <button onclick="endIntervalConsole()">Stop Example</button>
+
+
+    <h3>Timer</h3>
+    <h1 id="timer">00:00</h1>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+
+
+    <button onclick="setTimerText()">Call set timer function</button>
+
+    <script src="timer.js"></script>
+
+
+    <div class="box"></div>
+
+
+
+    <div id="reaction-game"></div>
+
+
+
+
+    <script>
+        const reactionGame = document.getElementById("reaction-game");
+
+        let startDate = null;
+
+        function startReactionGame() {
+            let randomPause = Math.random() * 9000 + 800
+
+            setTimeout(() => {console.log("hi")}, randomPause);
+
+            reactionGame.classList.add("waiting")
+            setTimeout(() => {
+                console.log("hi")
+                reactionGame.classList.remove("waiting");
+
+                //date for trackign time
+                startDate = new Date();
+
+                reactionGame.classList.add("started");
+
+                reactionGame.addEventListener("click",
+                    clickReact,
+                    { once: true }
+                );
+
+            }, randomPause);
+        }
+
+        function clickReact() {
+            let dateNow = new Date();
+            reactionGame.classList.remove("started");
+            let diff = dateNow - startDate
+            reactionGame.innerText = diff + "ms";
+
+            reactionGame.addEventListener("click",
+                resetReact,
+                { once: true }
+            );
+        }
+
+        function resetReact() {
+            milliseconds = 0;
+            reactionGame.innerText = "";
+            startReactionGame();
+        }
+
+        reactionGame.addEventListener("click",
+            startReactionGame,
+            { once: true }
+        );
+    </script>
+</body>
+
+</html>

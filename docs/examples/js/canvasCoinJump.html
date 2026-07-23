@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- Adapted from https://codepen.io/EnzoKilm/pen/NWPoMBY -->
+<html lang="en">
+
+<head>
+    <title>coin jump game</title>
+
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game" class="center"></div>
+    <p class="center">Click to Jump</p>
+</body>
+<script defer>
+    const SCREEN_WIDTH = 320;
+    const SCREEN_HEIGHT = 240;
+
+    const canvas = document.createElement("canvas");
+    canvas.width = SCREEN_WIDTH;
+    canvas.height = SCREEN_HEIGHT;
+    canvas.id = "canvas";
+
+    const centerEl = document.getElementById("game");
+    console.log(centerEl);
+    centerEl.appendChild(canvas);
+
+    //half screen size for mouse center
+    var mousex = SCREEN_WIDTH / 2,
+        mousey = SCREEN_HEIGHT / 2;
+
+    var finished = false;
+    var score = 0;
+    var coinslost = 0;
+
+    var keydown = [];
+
+    //set key-press array to all false;
+    for (var i = 0; i < 128; i++) {
+        keydown[i] = false;
+    }
+
+    var player = {
+        x: 32,
+        y: SCREEN_HEIGHT / 2,
+        width: 32,
+        height: 32,
+        yspeed: 0
+    };
+
+    var gravity = .5;
+
+    var ctx = canvas.getContext("2d");
+
+    function draw() {
+        if (finished) {
+            ctx.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+            ctx.fillText("You won with " + finishedcoins + " coins lost!", SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2);
+            return;
+        }
+
+        ctx.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
+        coins.forEach(function (coin) {
+            if (coin.active) {
+                coin.draw();
+            }
+        });
+
+        drawPlayerRectangle();
+
+        ctx.fillStyle = "black";
+        ctx.fillText("Score: " + score, 2, 10);
+        ctx.fillText("Coins Lost: " + coinslost, 2, 22);
+    }
+
+    function drawPlayerRectangle() {
+        ctx.fillStyle = "red";
+        ctx.fillRect(player.x - (player.width / 2),
+            player.y - (player.height / 2),
+            player.width,
+            player.height);
+    }
+
+    var finishedcoins;
+
+    function update() {
+        if (finished) {
+            exit;
+        }
+        if (score >= 100) {
+            finished = true;
+            finishedcoins = coinslost;
+        }
+        gravity += .5;
+        player.y += gravity;
+        player.y -= player.yspeed;
+
+        if (player.y > 240 - 16) {
+            gravity = 0;
+            player.yspeed = 0;
+            player.y = 240 - 16;
+        }
+
+        coins.forEach(function (coin) {
+            if (coin.active) {
+                coin.update();
+            }
+        });
+
+        if (keydown[32]) {
+            if (gravity == 0) {
+                player.yspeed = 10;
+            }
+        }
+
+    }
+
+    var coins = [];
+
+    function addCoin() {
+        let coin = {
+            active: true,
+            x: Math.random() * SCREEN_WIDTH,
+            y: -16,
+            width: 8,
+            height: 16,
+            gravity: 0.5,
+            draw: function () {
+                ctx.fillStyle = "yellow";
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+
+            },
+            update: function () {
+                this.gravity += .5;
+                this.y += this.gravity;
+
+                if (this.gravity > 3) {
+                    this.gravity = 3;
+                }
+
+                if (collides(this, player)) {
+                    score++;
+                    this.active = false;
+                }
+
+                if (this.y > SCREEN_HEIGHT) {
+                    this.active = false;
+                    coinslost++;
+                }
+            }
+        };
+
+        coins.push(coin);
+    }
+
+    //60fps
+    setInterval(function () {
+        update();
+        draw();
+    }, 1000 / 60);
+
+    //30fps, random check to add coin...
+    // this function can never work.
+    setInterval(function () {
+        if (Math.random() * 4 > 3) {
+            addCoin();
+        }
+    }, 1000 / 30);
+
+    document.addEventListener("keypress", function (event) {
+        keydown[event.which] = true;
+    });
+
+    document.addEventListener("keyup", function (event) {
+        keydown[event.which] = false;
+    });
+
+    function collides(a, b) {
+        if (b == player) {
+            b = {
+                x: player.x - 16,
+                y: player.y - 16,
+                width: player.width,
+                height: player.height
+            }
+        }
+
+        return a.x < b.x + b.width &&
+            a.x + a.width > b.x &&
+            a.y < b.y + b.height &&
+            a.y + a.height > b.y;
+    }
+
+    canvas.addEventListener("mousedown", (function (e) {
+        if (gravity == 0) {
+            player.yspeed = 12;
+        }
+        //why are we adding a coin when we jump?
+        addCoin();
+    }));
+
+    canvas.addEventListener("mousemove", (function (e) {
+        mousex = e.pageX - this.offsetLeft;
+        mousey = e.pageY - this.offsetTop;
+
+        player.x = e.pageX - this.offsetLeft;
+    }));
+</script>
+
+</html>
